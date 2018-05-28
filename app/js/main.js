@@ -154,5 +154,8 @@ $(document).ready(function() {
         $('.section-information').viewportChecker({
             classToAdd:'animated',
         });
+        $('.scheme').viewportChecker({
+            classToAdd:'animated',
+        });
     })();
 });
