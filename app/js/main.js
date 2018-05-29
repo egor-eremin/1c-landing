@@ -36,8 +36,9 @@ $(document).ready(function() {
             adaptiveHeight: true,
             fade: true,
             infinite: true,
+            dots: true,
             prevArrow: "<button type=\"button\" class=\"slick-prev\"></button>",
-            nextArrow: "<button type=\"button\" class=\"slick-next\"></button>"
+            nextArrow: "<button type=\"button\" class=\"slick-next\"></button>",
         });
         function doAnimations(elements) {
             var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
@@ -158,4 +159,24 @@ $(document).ready(function() {
             classToAdd:'animated',
         });
     })();
+    (function initMap() {
+        var map;
+
+        DG.then(function () {
+            map = DG.map('section-10', {
+                center: [52.279679, 104.253666],
+                zoom: 18,
+                scrollWheelZoom: false,
+                zoomControl: false
+            });
+            DG.marker([52.279508, 104.255356]).addTo(map);
+        });
+    })();
+    (function addValidationFooterForm() {
+        $('#callback-form-footer').validate();
+    })();
+    (function addHamburger() {
+        $('.main-menu').slicknav();
+    })();
+    ()();
 });

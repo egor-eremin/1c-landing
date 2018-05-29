@@ -488,12 +488,12 @@ input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s eas
 .main-logo__svg {
     width: 200px;
     height: auto;
-    margin-bottom: 6px;
+    margin-right: 21px;
 }
 .main-logo {
     display: flex;
-    flex-direction: column;
     font-size: 0.875rem;
+    align-items: center;
 }
 .header {
     padding-top: 10px;
@@ -1237,14 +1237,14 @@ h2 {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-50%) scale(0);
-    transition: transform .5s ease-in-out .4s,
-    visibility .5s ease-in-out .4s,
-    opacity .5s ease-in-out .4s;
+    transition: transform .5s ease-in-out .8s,
+    visibility .5s ease-in-out .8s,
+    opacity .5s ease-in-out .8s;
 }
 .differences .section-information__img {
-    transition: transform .5s ease-in-out .7s,
-    visibility .5s ease-in-out .7s,
-    opacity .5s ease-in-out .7s;
+    transition: transform .5s ease-in-out 1s,
+    visibility .5s ease-in-out 1s,
+    opacity .5s ease-in-out 1s;
 }
 .best-freelancer .section-information__img {
     left: -13%;
@@ -1386,7 +1386,7 @@ h2 {
     position: relative;
     margin-left: -94px;
     margin-bottom: 3.0625rem;
-    transition: .5s ease-in-out .3s;
+    transition: .5s ease-in-out .5s;
     transform-origin: 100% 100%;
     transform: scale(0);
 }
@@ -1422,9 +1422,10 @@ h2 {
     position: relative;
     opacity: 0;
     visibility: hidden;
-    transition-property: opacity, visibility;
+    transition-property: visibility, opacity;
     transition-timing-function: ease-in-out;
     transition-duration: .3s;
+    transition-delay: .3s;
 }
 .scheme.animated .scheme__item {
     opacity: 1;
@@ -1455,4 +1456,143 @@ h2 {
 }
 .scheme__item-text {
     line-height: 1.5;
+}
+.contacts__wrapper {
+    background-color: rgba(255, 255, 255, .9);
+    width: calc(500% / 12);
+    padding: 7rem 15px 4.375rem 15px;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.4;
+}
+.contacts {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+.contacts .template-wrapper {
+    position: relative;
+    z-index: 99999;
+    padding: 0;
+}
+.flex-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.flex-wrapper::before {
+    content: "";
+    flex-grow: 1;
+    background-color: rgba(255, 255, 255, .9);
+    position: relative;
+    z-index: 9999;
+}
+.flex-wrapper::after {
+    content: "";
+    flex-grow: 1;
+    background-color: transparent;
+}
+.h2-title_contacts {
+    margin-bottom: 2.125rem;
+}
+.contacts__text {
+    margin-bottom: 1.5625rem;
+    line-height: 1.5;
+}
+.contacts__phone a, .contacts__text a {
+    display: block;
+}
+.contacts__text a {
+    color: #1b1c1a !important;
+}
+.contacts__phone a {
+    color: #1b1c1a !important;
+    font-size: 1.5rem;
+}
+.contacts__phone {
+    margin-bottom: 1.5625rem;
+}
+.callback-form_footer {
+    margin-left: 0;
+    background-color: #ffeb64;
+}
+.button-yellow {
+    border-color: #7fb439;
+    color: #7fb439;
+    background-color: #ffeb64;
+}
+.button-yellow path {
+    fill: #7fb439;
+}
+.button-yellow:hover {
+    background-color: #7fb439;
+    color: #fff;
+}
+.button-yellow:hover path {
+    fill: #fff;
+}
+.slider .slick-dots {
+    display: none !important;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    z-index: 999999;
+}
+.slider .slick-dots {
+    font-size: 0;
+}
+.slider .slick-dots li {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 50%;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+.slider .slick-dots button {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 50%;
+}
+.slider .slick-dots li:hover, .slider .slick-dots li.slick-active {
+    background-color: rgba(255,255,255,1);
+}
+.slider .slick-dots li + li {
+    margin-left: 10px;
+}
+.main-logo__text {
+    font-weight: 600;
+}
+.section-information {
+    overflow: hidden;
+}
+@media (max-width: 1600px) {
+    .slick-prev {
+        left: -35px;
+    }
+    .slick-next {
+        right: -35px;
+    }
+}
+@media (max-width: 1500px) {
+    .value__wrapper {
+        width: 100%;
+        margin-left: 0;
+    }
+    .slick-prev {
+        left: 0px;
+    }
+    .slick-next {
+        right: 0px;
+    }
+}
+@media (max-width: 1360px) {
+    .wrapper-slick-arrow {
+        display: none;
+    }
+    .slider .slick-dots {
+        display: flex !important;
+    }
 }
