@@ -92,9 +92,11 @@ $(document).ready(function() {
         $(window).scroll(function() {
             if($(this).scrollTop() >= 190) {
                 $('.nav').addClass('nav_fixed');
+                $('.slicknav_menu').addClass('nav_fixed');
             }
         else{
                 $('.nav').removeClass('nav_fixed');
+                $('.slicknav_menu').removeClass('nav_fixed');
             }
         });
     })();
@@ -162,21 +164,93 @@ $(document).ready(function() {
     (function initMap() {
         var map;
 
-        DG.then(function () {
-            map = DG.map('section-10', {
-                center: [52.279679, 104.253666],
-                zoom: 18,
-                scrollWheelZoom: false,
-                zoomControl: false
+        function addMapOnDesctop() {
+            DG.then(function () {
+
+                map = DG.map('section-10', {
+                    center: [52.279679, 104.253666],
+                    zoom: 18,
+                    scrollWheelZoom: false,
+                    zoomControl: false
+                });
+
+                DG.marker([52.279508, 104.255356]).addTo(map);
             });
-            DG.marker([52.279508, 104.255356]).addTo(map);
+        };
+
+        function addMapOnAdaptive() {
+            DG.then(function () {
+
+                map = DG.map('content-map', {
+                    center: [52.279486, 104.255396],
+                    zoom: 18,
+                    scrollWheelZoom: false,
+                    zoomControl: false
+                });
+
+                DG.marker([52.279508, 104.255356]).addTo(map);
+            });
+        };
+
+        if ($(window).width() > 1100) {
+            addMapOnDesctop();
+        } else {
+            addMapOnAdaptive();
+
+        }
+
+
+        $(window).resize(function() {
+            if ($(window).width() > 1100) {
+
+                map.remove();
+
+                addMapOnDesctop();
+            } else {
+
+                map.remove();
+
+                addMapOnAdaptive();
+
+            }
         });
+
+
+
+
     })();
     (function addValidationFooterForm() {
         $('#callback-form-footer').validate();
     })();
     (function addHamburger() {
-        $('.main-menu').slicknav();
+        $('.main-menu').slicknav({
+            label: "Меню",
+        });
     })();
-    ()();
+    (function addScrollToElement() {
+        $(document).on("click",".slicknav_nav a", function (event) {
+            event.preventDefault();
+            var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+            $('body,html').animate({scrollTop: top}, 1500);
+        });
+    })();
+    (function addWrapperFor() {
+        $('.header > .template-wrapper').append($('.slicknav_menu'));
+    })();
+    (function addToTopBottom() {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 500) {
+                $('.buttom-top').fadeIn();
+            } else {
+                $('.buttom-top').fadeOut();
+            }
+        });
+        $('.buttom-top__top').click(function () {
+            $('body,html').animate({
+                scrollTop: 0,
+            }, 400);
+            return false;
+        });
+    })();
 });

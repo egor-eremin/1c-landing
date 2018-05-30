@@ -21,7 +21,7 @@
 </head>
 <body>
 <header class="header">
-    <div class="template-wrapper">
+    <div class="template-wrapper header__wrapper">
         <div class="header-top">
             <div class="main-logo">
                 <a href="/" class="main-logo">
@@ -81,10 +81,10 @@
                                 </span>
                 </a>
             </div>
+            <a href="tel:83952607728" class="header__phone">
+                +7 (3952) 60-77-28
+            </a>
             <div class="header__information">
-                <a href="tel:83952607728" class="header__phone">
-                    +7 (3952) 60-77-28
-                </a>
                 <button class="callback button button-small button-green">
                     оставить заявку
                 </button>
@@ -190,13 +190,61 @@
                     <div class="slider__wrapper">
                         <div class="slider__image" data-delay=".2s" data-animation="bounceInLeft"
                              data-after-animation="bounceOutLeft">
-                            <img src="images/slider-image.png" alt="slider-image">
+                            <img src="images/slider-image1.png" alt="slider-image">
                         </div>
                         <div class="slider__text">
                             <div class="slider__title">
                                 Доработка и консультирование по <span class="red">1с</span>
                             </div>
-                            <div class="slider__p">Бесплатная оценка задач</div>
+                            <div class="slider__p">Конфидициальность</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider__item">
+                <div class="template-wrapper main-slider__wrapper">
+                    <div class="slider__wrapper">
+                        <div class="slider__image" data-delay=".2s" data-animation="bounceInLeft"
+                             data-after-animation="bounceOutLeft">
+                            <img src="images/slider-image2.png" alt="slider-image">
+                        </div>
+                        <div class="slider__text">
+                            <div class="slider__title">
+                                Доработка и консультирование по <span class="red">1с</span>
+                            </div>
+                            <div class="slider__p">Оценка задач</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider__item">
+                <div class="template-wrapper main-slider__wrapper">
+                    <div class="slider__wrapper">
+                        <div class="slider__image" data-delay=".2s" data-animation="bounceInLeft"
+                             data-after-animation="bounceOutLeft">
+                            <img src="images/slider-image3.png" alt="slider-image">
+                        </div>
+                        <div class="slider__text">
+                            <div class="slider__title">
+                                Доработка и консультирование по <span class="red">1с</span>
+                            </div>
+                            <div class="slider__p">Приоритетные клиенты</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider__item">
+                <div class="template-wrapper main-slider__wrapper">
+                    <div class="slider__wrapper">
+                        <div class="slider__image" data-delay=".2s" data-animation="bounceInLeft"
+                             data-after-animation="bounceOutLeft">
+                            <img src="images/slider-image4.png" alt="slider-image">
+                        </div>
+                        <div class="slider__text">
+                            <div class="slider__title">
+                                Доработка и консультирование по <span class="red">1с</span>
+                            </div>
+                            <div class="slider__p">18 лет опыта</div>
                         </div>
                     </div>
                 </div>
@@ -304,6 +352,15 @@
                             <td class="rate td-bold">
                                 Базовый
                             </td>
+                            <td class="to-whom td-border td-hidden" rowspan="3">
+                                <div class="value__title">
+                                    Постоянные:
+                                </div>
+                                <div class="value__text">
+                                    Периодически возникают работы по настройке и доработке 1С,
+                                    или требуется консультация специалиста.
+                                </div>
+                            </td>
                             <td class="quantity td-center">
                                 8
                             </td>
@@ -314,6 +371,15 @@
                         <tr>
                             <td class="rate td-bold td-border">
                                 Максимальный
+                            </td>
+                            <td class="to-whom td-border td-hidden" rowspan="3">
+                                <div class="value__title">
+                                    Постоянные:
+                                </div>
+                                <div class="value__text">
+                                    Периодически возникают работы по настройке и доработке 1С,
+                                    или требуется консультация специалиста.
+                                </div>
                             </td>
                             <td class="quantity td-center td-border">
                                 16
@@ -970,27 +1036,32 @@
         </div>
     </section>
     <section id="section-10" class="section contacts">
+        <div id="content-map" class="adaptive-map">
+
+        </div>
         <div class="flex-wrapper">
             <div class="template-wrapper">
-            <div class="contacts__wrapper">
-                <h2 class="h2-title h2-title_contacts">
-                    Контакты
-                </h2>
-                <div class="contacts__text">
-                    Наш адрес:<br>
-                    Иркутск, 664039, ул. Терешковой, 15Б БЦ «Чайка»
-                </div>
-                <div class="contacts__text">
-                    Рабочее время: с 09:00 - 18:00, пн-пт
-                </div>
-                <div class="contacts__phone">
-                    <a href="tel:84951184366">+7 (495) 118-43-66</a>
-                    <a href="tel:83952607728">+7 (3952) 60-77-28</a>
-                </div>
-                <div class="contacts__text">
-                    <a href="mailto:expert@mmit.ru">e-mail: expert@mmit.ru</a>
-                    skype: d.skumatov
-                </div>
+                <div class="contacts__wrapper">
+                        <h2 class="h2-title h2-title_contacts">
+                            Контакты
+                        </h2>
+                    <div class="contacts__text-wrapper">
+                        <div class="contacts__text">
+                            Наш адрес:<br>
+                            Иркутск, 664039, ул. Терешковой, 15Б БЦ «Чайка»
+                        </div>
+                        <div class="contacts__text">
+                            Рабочее время: с 09:00 - 18:00, пн-пт
+                        </div>
+                        <div class="contacts__phone">
+                            <a href="tel:84951184366">+7 (495) 118-43-66</a>
+                            <a href="tel:83952607728">+7 (3952) 60-77-28</a>
+                        </div>
+                        <div class="contacts__text">
+                            <a href="mailto:expert@mmit.ru">e-mail: expert@mmit.ru</a>
+                            skype: d.skumatov
+                        </div>
+                    </div>
                 <form method="post" action="#" id="callback-form-footer" class="callback-form callback-form_footer">
                     <div class="form-title">
                         Оценить задачу бесплатно
@@ -1021,7 +1092,7 @@
                     </div>
                 </form>
             </div>
-        </div>
+            </div>
         </div>
     </section>
 </main>
@@ -1120,6 +1191,13 @@
         </div>
     </div>
 </footer>
+<div class="buttom-top">
+    <div class="template-wrapper">
+        <div class="buttom-top__top">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+    </div>
+</div>
 <form method="post" action="#" id="callback-form-popup" class="callback-form modal-popup callback-form_popup mfp-hide">
     <div class="form-title">
         Оставить заявку
