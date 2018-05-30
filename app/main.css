@@ -1808,6 +1808,7 @@ h2 {
     }
     .slider__wrapper {
         width: 100%;
+        height: 100%;
     }
     .main-slider__wrapper {
         height: 500px;
@@ -1937,7 +1938,7 @@ h2 {
         width: 100%;
     }
     .slider__image {
-        height: calc(100% - 44px);
+        height: calc(100% - 88px);
     }
     .slider__image img {
         max-height: 100%;
@@ -2114,12 +2115,18 @@ h2 {
         padding: 36px 0;
     }
     .main-slider__wrapper {
-        height: 400px;
+        height: 460px;
     }
     .tasks__item {
         margin-bottom: 3rem;
     }
     .value__wrapper {
         padding: 20px 20px 60px;
+    }
+    .slider__image {
+        height: calc(100% - 200px);
+    }
+    .slider__p {
+        font-size: 1.8rem;
     }
 }
